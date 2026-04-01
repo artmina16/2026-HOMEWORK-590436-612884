@@ -6,18 +6,18 @@ import org.junit.jupiter.api.Test;
 
 public class PartitaTest {
 	private Partita partita = new Partita();
-	
+	private Labirinto labirinto = new Labirinto();	
 	
 	@Test
 	public void testIsFinitaCfuZero() {
-		this.partita.setCfu(0);
+		this.partita.getGiocatore().setCfu(0);
 		assertTrue(this.partita.isFinita());
 	}
 	
 	@Test
 	public void testIsFinitaStanzaVincenteTrovata() {
-		Stanza biblioteca = this.partita.getStanzaVincente();
-		this.partita.setStanzaCorrente(biblioteca);
+		Stanza biblioteca = this.labirinto.getStanzaVincente();
+		this.labirinto.setStanzaCorrente(biblioteca);
 		assertTrue(this.partita.isFinita());
 	}
 	
