@@ -1,4 +1,6 @@
-package it.uniroma3.diadia;
+package it.uniroma3.giocatore;
+
+import it.uniroma3.attrezzi.Attrezzo;
 
 public class Borsa {
 	

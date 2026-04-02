@@ -4,9 +4,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+import it.uniroma3.ambienti.Stanza;
+
 public class PartitaTest {
 	private Partita partita = new Partita();
-	private Labirinto labirinto = new Labirinto();	
+		
 	
 	@Test
 	public void testIsFinitaCfuZero() {
@@ -16,8 +18,8 @@ public class PartitaTest {
 	
 	@Test
 	public void testIsFinitaStanzaVincenteTrovata() {
-		Stanza biblioteca = this.labirinto.getStanzaVincente();
-		this.labirinto.setStanzaCorrente(biblioteca);
+		Stanza biblioteca = this.partita.getLabirinto().getStanzaVincente();
+		this.partita.getLabirinto().setStanzaCorrente(biblioteca);
 		assertTrue(this.partita.isFinita());
 	}
 	

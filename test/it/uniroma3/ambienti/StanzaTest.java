@@ -1,8 +1,11 @@
-package it.uniroma3.diadia;
+package it.uniroma3.ambienti;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
+
+import it.uniroma3.ambienti.Stanza;
+import it.uniroma3.attrezzi.Attrezzo;
 
 public class StanzaTest {
 	
@@ -62,12 +65,12 @@ public class StanzaTest {
 	
 	@Test
 	public void testRemoveAttrezzoInesistente() {
-		assertFalse(prova1.removeAttrezzo(gomma));
+		assertFalse(prova1.removeAttrezzo("Gomma"));
 	}
 	
 	@Test
 	public void testRemoveAttrezzoTrovato() {
 		prova1.addAttrezzo(gomma);
-		assertTrue(prova1.removeAttrezzo(gomma));
+		assertTrue(prova1.removeAttrezzo("Gomma"));
 	}
 }

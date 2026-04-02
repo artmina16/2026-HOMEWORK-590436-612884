@@ -1,7 +1,6 @@
-package it.uniroma3.diadia;
+package it.uniroma3.ambienti;
 
-
-
+import it.uniroma3.attrezzi.Attrezzo;
 
 /**
  * Classe Stanza - una stanza in un gioco di ruolo.
