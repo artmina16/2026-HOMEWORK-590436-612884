@@ -78,7 +78,16 @@ public class DiaDia {
 			System.out.println("Quale attrezzo vuoi posare ?");
 			return;
 		}
-		this.partita.getLabirinto().getStanzaCorrente().addAttrezzo(this.partita.getGiocatore().getBorsa().getAttrezzo(nomeAttrezzo));		
+		if(!this.partita.getGiocatore().getBorsa().hasAttrezzo(nomeAttrezzo)) {
+			System.out.println("Attrezzo non trovato");
+			return;
+		}else {
+		Attrezzo attrezzoDaPosare = this.partita.getGiocatore().getBorsa().getAttrezzo(nomeAttrezzo);
+		this.partita.getLabirinto().getStanzaCorrente().addAttrezzo(attrezzoDaPosare);	
+		this.partita.getGiocatore().getBorsa().removeAttrezzo(nomeAttrezzo);
+		System.out.println("Attrezzo posato nella stanza");
+		}
+		
 	}
 
 	private void prendi(String nomeAttrezzo) {
@@ -89,11 +98,11 @@ public class DiaDia {
 		if(!this.partita.getLabirinto().getStanzaCorrente().hasAttrezzo(nomeAttrezzo)) {
 			System.out.println("Attrezzo non trovato");
 			return;
-		}	
+		}else {	
 		Attrezzo attrezzo = this.partita.getLabirinto().getStanzaCorrente().getAttrezzo(nomeAttrezzo);
-		if(attrezzo!=null) {
+		
 			this.partita.getGiocatore().getBorsa().addAttrezzo(attrezzo);
-			this.partita.getLabirinto().getStanzaCorrente().removeAttrezzo(attrezzo);
+			this.partita.getLabirinto().getStanzaCorrente().removeAttrezzo(nomeAttrezzo);
 			System.out.println("Attrezzo preso!");
 		}
 	}
