@@ -2,18 +2,26 @@ package it.uniroma3.giocatore;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class GiocatoreTest {
-
-	@BeforeEach
-	void setUp() throws Exception {
+	
+	Giocatore matteo = new Giocatore();
+	
+	@Test
+	void testGetBorsaVuota() {
+		assertNotNull(matteo.getBorsa());
 	}
 
 	@Test
-	void test() {
-		fail("Not yet implemented");
+	void testGetCfuIniziali() {
+		assertEquals(20, matteo.getCfu());
+	}
+	
+	@Test
+	void testSetCfuToValue11() {
+		matteo.setCfu(11);
+		assertEquals(11, matteo.getCfu());
 	}
 
 }

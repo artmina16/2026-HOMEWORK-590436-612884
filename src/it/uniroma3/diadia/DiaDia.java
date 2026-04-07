@@ -106,7 +106,7 @@ public class DiaDia {
 		
 			this.partita.getGiocatore().getBorsa().addAttrezzo(attrezzo);
 			this.partita.getLabirinto().getStanzaCorrente().removeAttrezzo(nomeAttrezzo);
-			System.out.println("Attrezzo preso!");
+			System.out.println(partita.getGiocatore().getBorsa().toString());
 		}
 	}
 

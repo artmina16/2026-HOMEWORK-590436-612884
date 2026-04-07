@@ -4,7 +4,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import it.uniroma3.ambienti.Stanza;
 import it.uniroma3.attrezzi.Attrezzo;
 
 public class StanzaTest {
