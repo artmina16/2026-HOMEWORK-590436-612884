@@ -3,7 +3,7 @@ package it.uniroma3.ambienti;
 import it.uniroma3.attrezzi.Attrezzo;
 
 public class Labirinto {
-	private Stanza stanzaCorrente;
+	private Stanza stanzaIniziale;
 	private Stanza stanzaVincente;
 	
 	public Labirinto() {
@@ -42,7 +42,7 @@ public class Labirinto {
 		atrio.addAttrezzo(osso);
 
 		// il gioco comincia nell'atrio
-        stanzaCorrente = atrio;  
+        stanzaIniziale = atrio;  
 		stanzaVincente = biblioteca;
     }
 	
@@ -50,12 +50,8 @@ public class Labirinto {
 		return stanzaVincente;
 	}
 
-	public void setStanzaCorrente(Stanza stanzaCorrente) {
-		this.stanzaCorrente = stanzaCorrente;
-	}
-
-	public Stanza getStanzaCorrente() {
-		return this.stanzaCorrente;
+	public Stanza getStanzaIniziale() {
+		return stanzaIniziale;
 	}
 	
 }

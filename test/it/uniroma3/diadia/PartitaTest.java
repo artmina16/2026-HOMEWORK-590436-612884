@@ -18,8 +18,8 @@ public class PartitaTest {
 	
 	@Test
 	public void testIsFinitaStanzaVincenteTrovata() {
-		Stanza biblioteca = this.partita.getLabirinto().getStanzaVincente();
-		this.partita.getLabirinto().setStanzaCorrente(biblioteca);
+		Stanza biblioteca = this.partita.getStanzaVincente();
+		this.partita.setStanzaCorrente(biblioteca);
 		assertTrue(this.partita.isFinita());
 	}
 	

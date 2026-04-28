@@ -4,7 +4,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+import it.uniroma3.diadia.Partita;
+
 class LabirintoTest {	
+	private Partita partitaDiProva = new Partita();
 	private Labirinto labirintoDiProva = new Labirinto();
 	private Stanza prova = new Stanza("Prova");	
 	
@@ -15,13 +18,13 @@ class LabirintoTest {
 	
 	@Test 
 	void testGetStanzaCorrente() {
-		assertNotNull(labirintoDiProva.getStanzaCorrente());
+		assertNotNull(partitaDiProva.getStanzaCorrente());
 	}
 	
 	@Test 
 	void testSetStanzaCorrente() {
-		labirintoDiProva.setStanzaCorrente(prova);
-		assertEquals(prova, labirintoDiProva.getStanzaCorrente());
+		partitaDiProva.setStanzaCorrente(prova);
+		assertEquals(prova, partitaDiProva.getStanzaCorrente());
 	}	
 	
 }
